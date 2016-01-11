@@ -1,0 +1,114 @@
+2015.8.25
+ALPHA 5 {final alpha}
+1.Removed ELFXEnhancer.esp from the required esp list. But you can activate it if you want.
+2.A lot of weather parameter tweaks.
+3.Absolutely balanced tone and brightness.
+4.Added rain desaturation parameters in effect.txt.
+5.Fixed some problems of the fomod installation.
+
+ 
+
+2015.8.6
+ALPHA 4
+1.Added shadow desaturation.
+2.Changed tonemapping and contrast.
+3.New rain drop code for different shapes of droplet.
+4.Added Night Option in fomod installation.
+5.Multiple weather tweaks.
+6.Changed some parameters in SSAO and SSS.
+
+ 
+
+2015.7.26
+ALPHA 3
+1.Decrease Adaption sensitivity at Day.
+2.Add black level to interior and Day.
+3.A lot of multiple weather tweaks because of the changes above.
+4.Add ambient color to interior instead of pure black.
+5.Now the night should be darker.
+6.A new normal map for water plugin.
+
+
+
+2015.7.19
+ALPHA 2
+1.Tweaked Eye Adaption.
+2.Change water color in weather form ID.
+3.Small tweaks for multiple weather.
+
+ 
+
+2015.7.15
+ALPHA 1
+First ALPHA release with many new features:
+1.Dark dungeons.
+2.New tonemapping and balanced brightness.
+3.New ambient color and lighting.
+
+ 
+
+2015.3.24
+0.9.9.17
+Believe or not. This is really the last test release.
+
+ 
+
+2015.3.6
+0.9.9.16
+REAL Last test release.
+
+ 
+
+2015.2.27
+0.9.9.15
+Last test release.
+
+ 
+
+2015.2.17
+0.9.9.14
+Removed nighteye code. Quality options redone. Brightness and tone still in final adjustment. May be the last test release.
+
+ 
+
+2015.2.14
+0.9.9.13
+Removed Sweetfx and balanced brightness and tone. May be the last test release.
+
+ 
+
+2015.2.11
+0.9.9.12
+Final tweak and may be the last test release.
+
+ 
+
+2015.2.7
+0.9.9.11
+Final tweak and tone adjusted.
+
+ 
+
+2015.2.5
+0.9.9.10
+Some bug fixed and tone tweaked.
+
+ 
+
+2015.1.31
+0.9.9.9
+WIP version tested with hodilton.
+
+ 
+
+2014.12.18
+0.9.9.8
+1.COT plugin tweaked for better sky color.
+2.Autoinstaller script bug fixed.
+3.Multiple weather parameters adjusted.
+4.NMM preview image remade.
+
+
+
+2014.7.6
+version 0.9.0 initial release
