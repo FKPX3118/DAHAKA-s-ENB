@@ -1,0 +1,523 @@
+/**
+ *	SHADER ADDON
+ *	By ZeroKing
+ *	Night Code and Rain Desaturation by FKPX3118
+ */
+
+/**
+ *	ENBSeries
+ *	visit http://enbdev.com for updates
+ *	Copyright (c) 2007-2014 Boris Vorontsov
+ */ 
+ 
+//--------------------------//
+//   Internal parameters    // 
+//     Can be modified	    //
+//--------------------------// 
+
+///////////////
+//  CHOICES  //
+///////////////
+bool   C_BLACKLEVEL <
+	string UIName =  "Enable Black Level";
+> = {true};
+
+bool   C_CONTRASTCURVES <
+	string UIName =  "Enable Contrast";
+> = {true};
+
+bool   C_VIBRANCE <
+	string UIName =  "Enable Vibrance";
+> = {true};
+ 	
+//////////////////
+//   CONTRAST	//
+//////////////////
+float	ContrastCurveDay <
+	string UIName="Contrast - Day";
+	string UIWidget="Spinner";
+	float UIMin=-1.0;
+	float UIMax=1.0;
+> = {0};
+
+float	ContrastCurveNight <
+	string UIName="Contrast - Night";
+	string UIWidget="Spinner";
+	float UIMin=-1.0;
+	float UIMax=1.0;
+> = {0};
+
+float	ContrastCurveInt <
+	string UIName="Contrast - Interior";
+	string UIWidget="Spinner";
+	float UIMin=-1.0;
+	float UIMax=1.0;
+> = {0};
+
+//////////////////
+//   VIBRANCE   //
+//////////////////
+float	VibranceDay <
+	string UIName="Vibrance - Day";
+	string UIWidget="Spinner";
+	float UIMin=-2.0;
+	float UIMax=2.0;
+> = {0};
+
+float	VibranceNight <
+	string UIName="Vibrance - Night";
+	string UIWidget="Spinner";
+	float UIMin=-2.0;
+	float UIMax=2.0;
+> = {0};
+
+float	VibranceInt <
+	string UIName="Vibrance - Interior";
+	string UIWidget="Spinner";
+	float UIMin=-2.0;
+	float UIMax=2.0;
+> = {0};
+		
+////////////////////
+//  LUMASHARPEN	  //
+////////////////////
+float	sharp_strength <
+	string UIName="LumaSharpen Strength";
+	string UIWidget="Spinner";
+	float UIMin=0.0;
+	float UIMax=5.0;
+> = {0.5};	
+
+float	sharp_clamp <
+	string UIName="LumaSharpen Clamp";
+	string UIWidget="Spinner";
+	float UIMin=0.0;
+	float UIMax=1.0;
+> = {0.025};	
+
+////////////////////
+//  BLACK LEVELS  //
+////////////////////
+float	BlackPointDay <
+	string UIName="Black Level - Day";
+	string UIWidget="Spinner";
+	float UIMin=0.0;
+	float UIMax=255.0;
+> = {5};	
+
+float	BlackPointNight <
+	string UIName="Black Level - Night";
+	string UIWidget="Spinner";
+	float UIMin=0.0;
+	float UIMax=255.0;
+> = {5};	
+
+float	BlackPointInt <
+	string UIName="Black Level - Interior";
+	string UIWidget="Spinner";
+	float UIMin=0.0;
+	float UIMax=255.0;
+> = {5};	
+
+float	WhitePointDay <
+	string UIName="White Level - Day";
+	string UIWidget="Spinner";
+	float UIMin=0.0;
+	float UIMax=255.0;
+> = {245};	
+
+float	WhitePointNight <
+	string UIName="White Level - Night";
+	string UIWidget="Spinner";
+	float UIMin=0.0;
+	float UIMax=255.0;
+> = {245};	
+
+float	WhitePointInt <
+	string UIName="White Level - Interior";
+	string UIWidget="Spinner";
+	float UIMin=0.0;
+	float UIMax=255.0;
+> = {245};
+
+
+/////////////////////////
+//  RAIN DESATURATION  //
+/////////////////////////
+
+float	DesaturationFade <
+	string UIName="Rain Desaturation - Fade";
+	string UIWidget="Spinner";
+	float UIMin=1.0;
+	float UIMax=10.0;
+> = {5.0};	
+
+float	DesaturationOffset <
+	string UIName="Rain Desaturation - Offset";
+	string UIWidget="Spinner";
+	float UIMin=-1.0;
+	float UIMax=0.0;
+> = {-0.1};
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+//--------------------------//
+//   External parameters    // 
+//     Do not modify	    //
+//--------------------------//
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Keyboard controlled temporary variables. 
+// Press and hold key 1,2,3...8 together with PageUp or PageDown to modify. 
+// By default all set to 1.0
+float4	tempF1; 			//0,1,2,3
+float4	tempF2; 			//5,6,7,8
+float4	tempF3; 			//9,0
+float4	Timer;				//x=generic timer in range 0..1, period of 16777216 ms (4.6 hours), w=frame time elapsed (in seconds)
+float4	ScreenSize;			//x=Width, y=1/Width, z=ScreenScaleY, w=1/ScreenScaleY
+float	ENightDayFactor;	//changes in range 0..1, 0 means that night time, 1 - day time
+float	EInteriorFactor;	//changes 0 or 1. 0 means that exterior, 1 - interior
+float4	WeatherAndTime;		
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////
+//   TEXTURES	//
+//////////////////
+texture2D texColor;
+texture2D texNoise;
+
+///////////////////
+//   SAMPLERS	 //
+///////////////////
+sampler2D SamplerColor = sampler_state
+{
+	Texture   = <texColor>;
+	MinFilter = LINEAR;
+	MagFilter = LINEAR;
+	MipFilter = NONE;
+	AddressU  = Clamp;
+	AddressV  = Clamp;
+	SRGBTexture=FALSE;
+	MaxMipLevel=0;
+	MipMapLodBias=0;
+};
+
+sampler2D SamplerNoise = sampler_state
+{
+	Texture   = <texNoise>;
+	MinFilter = LINEAR;
+	MagFilter = LINEAR;
+	MipFilter = NONE;
+	AddressU  = Wrap;
+	AddressV  = Wrap;
+	SRGBTexture=FALSE;
+	MaxMipLevel=0;
+	MipMapLodBias=0;
+};
+
+//////////////////
+//   STRUCTS	//
+//////////////////
+struct VS_OUTPUT_POST
+{
+	float4 vpos  : POSITION;
+	float2 txcoord : TEXCOORD0;
+};
+
+struct VS_INPUT_POST
+{
+	float3 pos  : POSITION;
+	float2 txcoord : TEXCOORD0;
+};
+
+VS_OUTPUT_POST VS_PostProcess(VS_INPUT_POST IN)
+{
+	VS_OUTPUT_POST OUT;
+
+	float4 pos=float4(IN.pos.x,IN.pos.y,IN.pos.z,1.0);
+
+	OUT.vpos=pos;
+	OUT.txcoord.xy=IN.txcoord.xy;
+
+	return OUT;
+}
+
+//////////////////
+//   SHADERS	//
+//////////////////
+float4 PS_ProcessLumaSharpen(VS_OUTPUT_POST IN, float2 vPos : VPOS, float2 tex : TEXCOORD0) : COLOR
+{
+	float2 coord = IN.txcoord.xy;
+	float sHeight = ScreenSize.x * ScreenSize.w;
+	float2 TexelSize = float2 (ScreenSize.y, 1.0 / sHeight);
+	float px = TexelSize.x;
+	float py = TexelSize.y; 
+	
+	#define SharpMethod 4
+			
+	// Bias value
+	float offset_bias = 1.0;	
+	
+	#define CoefLuma 							float4(0.2126, 0.7152, 0.0722, 0)
+	#define sharp_strength_luma 				(CoefLuma * sharp_strength) 	  
+ 
+    half4 ori = tex2D(SamplerColor, coord.xy);
+ 
+    [branch] if (any(frac(ori.rgb)))
+    {
+		#if SharpMethod == 1
+			// -- Gaussian filter --
+			//   [ 2/9, 4/9,    ]     [ 1 , 2 ,   ]
+			//   [ 4/9, 8/9, 4/9]  =  [ 2 , 4 , 2 ]
+			//   [    , 2/9, 2/9]     [   , 2 , 1 ]
+		   
+			half4 blur_ori = tex2Dlod(SamplerColor, float4(tex,tex) + float4(-px,py,-px,py) / 3 * offset_bias); 	// North West
+			blur_ori += tex2Dlod(SamplerColor, float4(tex,tex) + float4(px,-py,px,-py) / 3 * offset_bias);  		// South East
+			
+			//Divide by the number of texture fetches
+			blur_ori /= 2; 
+		#endif
+ 
+		// -- Pattern 2 -- A 9 tap gaussian using 4+1 texture fetches.
+		#if SharpMethod == 2
+			// -- Gaussian filter --
+			//   [ .25, .50, .25]     [ 1 , 2 , 1 ]
+			//   [ .50,   1, .50]  =  [ 2 , 4 , 2 ]
+			//   [ .25, .50, .25]     [ 1 , 2 , 1 ]
+ 
+			half4 blur_ori = tex2Dlod(SamplerColor, float4(tex,tex) + float4(-px,py,-px,py) * 0.5 * offset_bias); 		// North West
+			blur_ori += tex2Dlod(SamplerColor, float4(tex,tex) + float4(px,-py,px,-py) * 0.5 * offset_bias);  			// South East
+ 
+			if (any((blur_ori.rgb / 2) - ori.rgb))
+			{
+				blur_ori += tex2Dlod(SamplerColor, float4(tex,tex) + float4(-px,-py,-px,-py) * 0.5 * offset_bias); 		// South West
+				blur_ori += tex2Dlod(SamplerColor, float4(tex,tex) + float4(px,py,px,py) * 0.5 * offset_bias); 			// North East
+				
+				//Divide by the number of texture fetches
+				blur_ori *= 0.25;;  
+			}
+	 
+			//Divide by the number of texture fetches
+			blur_ori *= 0.25;;  
+		#endif
+ 
+		// -- Pattern 3 -- An experimental 17 tap gaussian using 4+1 texture fetches.
+		#if SharpMethod == 3 
+			// -- Gaussian filter --
+			//   [   , 4 , 6 ,   ,   ]
+			//   [   ,16 ,24 ,16 , 4 ]
+			//   [ 6 ,24 ,50 ,24 , 6 ]
+			//   [ 4 ,16 ,24 ,16 ,   ]
+			//   [   ,   , 6 , 4 ,   ]
+ 
+			half4 blur_ori = tex2Dlod(SamplerColor, float4(tex,tex) + float4(-0.4*px,1.2*py,-0.4*px,1.2*py) * offset_bias); 	// North North West
+			blur_ori += tex2Dlod(SamplerColor, float4(tex,tex) + float4(0.4*px,-1.2*py,0.4*px,-1.2*py) * offset_bias);  		// South South East
+			blur_ori += tex2Dlod(SamplerColor, float4(tex,tex) + float4(1.2*px,0.4*py,0,0) * offset_bias); 						// East North East
+			blur_ori += tex2Dlod(SamplerColor, float4(tex,tex) + float4(-1.2*px,-0.4*py,0,0) * offset_bias); 					// West South West
+			blur_ori += ori; 	// Probably not needed. Only serves to lessen the effect.
+	   
+			blur_ori /= 5;  	//Divide by the number of texture fetches
+		#endif
+ 
+		// -- Pattern 4 -- A 9 tap high pass using 4+1 texture fetches.
+		#if SharpMethod == 4 
+			// -- Gaussian filter --
+			//   [ .50, .50, .50]     [ 1 , 1 , 1 ]
+			//   [ .50,    , .50]  =  [ 1 ,   , 1 ]
+			//   [ .50, .50, .50]     [ 1 , 1 , 1 ]
+ 
+			half4 blur_ori = tex2Dlod(SamplerColor, float4(tex,tex) + float4(0.5 * -px,py,0.5 * -px,py) * offset_bias);		// North North West
+			blur_ori += tex2Dlod(SamplerColor, float4(tex,tex) + float4(0.5 * px,-py,0.5 * px,-py));  						// South South East
+			blur_ori += tex2Dlod(SamplerColor, float4(tex,tex) + float4(-px,0.5 * -py,-px,0.5 * -py)); 						// West South West
+			blur_ori += tex2Dlod(SamplerColor, float4(tex,tex) + float4(px,0.5 * py,px,0.5 * py) * offset_bias); 			// East North East
+			blur_ori += (2 * ori); 	// Probably not needed. Only serves to lessen the effect.
+        
+			blur_ori /= 6;  		//Divide by the number of texture fetches
+		#endif	
+               
+        // -- Calculate the sharpening -- 
+        half sharp = ori - blur_ori;  
+        // -- Adjust strength of the sharpening --
+        sharp = dot(sharp, sharp_strength_luma); 
+		// -- Clamping the maximum amount of sharpening to prevent halo artifacts --
+        sharp = clamp(sharp, -sharp_clamp, sharp_clamp);  
+		// -- Combining the values to get the final sharpened pixel   --
+        half4 done = ori + sharp;     
+
+        return done;
+    }
+    
+	else
+    {               
+        return ori;
+    }
+}
+
+float4 PS_ProcessContrast(VS_OUTPUT_POST IN, float2 vPos : VPOS) : COLOR
+{
+	float ContrastCurve = lerp(lerp(ContrastCurveNight, ContrastCurveDay, ENightDayFactor), ContrastCurveInt, EInteriorFactor);
+
+	float4	res;
+	float3	origcolor = tex2D(SamplerColor, IN.txcoord.xy);
+	
+	float3	lumCoeff = float3(0.212656, 0.715158, 0.072186);  	//Calculate luma with these values
+	float luma = dot(lumCoeff, origcolor.rgb);
+	float3 chroma = origcolor.rgb - luma;	
+	float Curves_contrast_blend = ContrastCurve;
+	float PI = 3.1415926535897932384626433832795; 	
+	float x = luma; 											//If the curve should be applied to Luma
+ 	x = x - 0.5;
+	x = x / ((abs(x)*1.25) + 0.375 ) + 0.5;
+	x = lerp(luma, x, Curves_contrast_blend);					//if the curve should be applied to both Luma and Chroma
+		
+	if (C_CONTRASTCURVES==true)		{	
+		res.rgb = x + chroma; 									//Blend by Curves_contrast
+	}	
+	if (C_CONTRASTCURVES==false)	{
+		res.rgb = origcolor.rgb;
+	}		
+  
+	res.w=1.0;
+	return res;
+}
+
+float4 PS_ProcessVibrance(VS_OUTPUT_POST IN, float2 vPos : VPOS) : COLOR
+{
+
+	float2 VibranceDayRain; //Desaturation for rainy weather.
+	
+	if(WeatherAndTime.x > 14.8 && WeatherAndTime.x < 16.2)
+	VibranceDayRain.x = VibranceDay / DesaturationFade + DesaturationOffset;
+	else
+	VibranceDayRain.x = VibranceDay;
+
+	if(WeatherAndTime.y > 14.8 && WeatherAndTime.y < 16.2)
+	VibranceDayRain.y = VibranceDay / DesaturationFade + DesaturationOffset;
+	else
+	VibranceDayRain.y = VibranceDay;
+	
+	float Vibrance = lerp(lerp(VibranceNight, lerp(VibranceDayRain.y,VibranceDayRain.x,WeatherAndTime.z), ENightDayFactor), VibranceInt, EInteriorFactor);
+
+	float4	res;
+	float3	origcolor=tex2D(SamplerColor, IN.txcoord.xy);
+	
+	float3	lumCoeff = float3(0.212656, 0.715158, 0.072186);  				//Calculate luma with these values
+	float luma = dot(lumCoeff, origcolor.rgb);
+	float3 chroma = origcolor.rgb - luma;
+	float	max_color = max(origcolor.r, max(origcolor.g,origcolor.b)); 	//Find the strongest color
+	float	min_color = min(origcolor.r, min(origcolor.g,origcolor.b)); 	//Find the weakest color
+	
+	float	color_saturation = max_color - min_color; 						//Saturation is the difference between min and max
+	
+	if (C_VIBRANCE==true)			{	
+		res.rgb = lerp(luma, origcolor.rgb, (1.0 + (Vibrance * (1.0 - (sign(Vibrance) * color_saturation))))); 	//Extrapolate between luma and original by 1 + (1-saturation) - current
+	}	
+	if (C_VIBRANCE==false)			{
+		res.rgb = origcolor.rgb;
+	}	
+	  
+	res.w=1.0;
+	return res;
+}
+
+float4 PS_ProcessLevels(VS_OUTPUT_POST IN, float2 vPos : VPOS) : COLOR
+{
+	float Levels_black_point = lerp(lerp(BlackPointNight, BlackPointDay, ENightDayFactor), BlackPointInt, EInteriorFactor);
+	float Levels_white_point = lerp(lerp(WhitePointNight, WhitePointDay, ENightDayFactor), WhitePointInt, EInteriorFactor);
+
+	#define black_point_float ( Levels_black_point / 255.0 )
+	#define white_point_float ( 255.0 / (Levels_white_point - Levels_black_point))
+	
+	float4	res;
+	float3	origcolor = tex2D(SamplerColor, IN.txcoord.xy);
+	
+	if (C_BLACKLEVEL==true)			{	
+		res.rgb = origcolor.rgb * white_point_float - (black_point_float *  white_point_float);
+	}	
+	if (C_BLACKLEVEL==false) 		{
+		res.rgb = origcolor.rgb;
+	}	
+	
+	res.w=1.0;
+	return res;
+}
+
+///////////////////////
+//    TECHNIQUES     //
+///////////////////////
+technique PostProcess
+{
+	pass P0
+	{
+		VertexShader = compile vs_3_0 VS_PostProcess();
+		PixelShader  = compile ps_3_0 PS_ProcessLumaSharpen();
+
+		DitherEnable=FALSE;
+		ZEnable=FALSE;
+		CullMode=NONE;
+		ALPHATESTENABLE=FALSE;
+		SEPARATEALPHABLENDENABLE=FALSE;
+		AlphaBlendEnable=FALSE;
+		StencilEnable=FALSE;
+		FogEnable=FALSE;
+		SRGBWRITEENABLE=FALSE;
+	}
+}
+
+technique PostProcess2
+{
+	pass P0
+	{
+		VertexShader = compile vs_3_0 VS_PostProcess();
+		PixelShader  = compile ps_3_0 PS_ProcessLevels();
+
+		DitherEnable=FALSE;
+		ZEnable=FALSE;
+		CullMode=NONE;
+		ALPHATESTENABLE=FALSE;
+		SEPARATEALPHABLENDENABLE=FALSE;
+		AlphaBlendEnable=FALSE;
+		StencilEnable=FALSE;
+		FogEnable=FALSE;
+		SRGBWRITEENABLE=FALSE;
+	}
+}	
+
+technique PostProcess3
+{
+	pass P0
+	{
+		VertexShader = compile vs_3_0 VS_PostProcess();
+		PixelShader  = compile ps_3_0 PS_ProcessVibrance();
+
+		DitherEnable=FALSE;
+		ZEnable=FALSE;
+		CullMode=NONE;
+		ALPHATESTENABLE=FALSE;
+		SEPARATEALPHABLENDENABLE=FALSE;
+		AlphaBlendEnable=FALSE;
+		StencilEnable=FALSE;
+		FogEnable=FALSE;
+		SRGBWRITEENABLE=FALSE;
+	}
+}
+
+technique PostProcess4
+{
+	pass P0
+	{
+		VertexShader = compile vs_3_0 VS_PostProcess();
+		PixelShader  = compile ps_3_0 PS_ProcessContrast();
+
+		DitherEnable=FALSE;
+		ZEnable=FALSE;
+		CullMode=NONE;
+		ALPHATESTENABLE=FALSE;
+		SEPARATEALPHABLENDENABLE=FALSE;
+		AlphaBlendEnable=FALSE;
+		StencilEnable=FALSE;
+		FogEnable=FALSE;
+		SRGBWRITEENABLE=FALSE;
+	}
+}

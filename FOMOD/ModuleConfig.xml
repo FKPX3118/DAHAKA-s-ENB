@@ -1,0 +1,599 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
+	<moduleName>DAHAKA's ENB</moduleName>
+	<moduleDependencies operator="And">
+		<fileDependency file="Skyrim.esm" state="Active"/>
+		<fileDependency file="Update.esm" state="Active"/>
+		<fileDependency file="Dawnguard.esm" state="Active"/>
+    <fileDependency file="Dragonborn.esm" state="Active"/>		
+		<fileDependency file="ClimatesOfTamriel.esm" state="Active"/>
+		<fileDependency file="ClimatesOfTamriel-Dawnguard-Patch.esp" state="Active"/>
+		<fileDependency file="ClimatesOfTamriel-Dragonborn-Patch.esp" state="Active"/>				
+		<fileDependency file="EnhancedLightsandFX.esp" state="Active"/>
+	</moduleDependencies>
+	<installSteps order="Explicit">
+		<installStep name="Main">
+			<optionalFileGroups>
+				<group name="Core Files" type="SelectAny">
+					<plugins order="Explicit">
+						<plugin name="DAHAKA's ENB Core Files">
+							<description>
+								<![CDATA[ DAHAKA is an ENB preset with multiple weather settings for COT (Climates Of Tamriel). It also contains an .esp file which modifies the standard COT weathers. The installation supports MO (Mod Organizer) and NMM (Nexus Mod Manager). With the .fomod file you can easily choose the quality level, color level, the focus length in DOF, optional water plugin and a bunch of ENBlens styles. This ENB is designed for Climates Of Tamriel 5.0 and Enhanced Lights and FX 2.0.   ]]>
+							</description>
+							<image path="Pictures\Main\Main.jpg"/>
+							<files>
+								<folder source="00 - Core" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Required"/>
+							</typeDescriptor>
+						</plugin>
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+		<installStep name="Option">
+			<optionalFileGroups>
+				<group name="Quality Option" type="SelectExactlyOne">
+					<plugins order="Explicit">
+						<plugin name="Low">
+							<description>
+								<![CDATA[ All effects have been enabled with low quality.  ]]>
+							</description>
+							<image path="Pictures\Quality\1.jpg"/>
+							<files>
+								<folder source="01 - Quality\Low" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Medium">
+							<description>
+								<![CDATA[ All effects have been enabled with medium quality. ]]>
+							</description>
+							<image path="Pictures\Quality\2.jpg"/>
+							<files>
+								<folder source="01 - Quality\Medium" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="High">
+							<description>
+								<![CDATA[ All effects have been enabled with high quality. ]]>
+							</description>
+							<image path="Pictures\Quality\3.jpg"/>
+							<files>
+								<folder source="01 - Quality\High" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Insane">
+							<description>
+								<![CDATA[ All effects have been enabled with highest quality. (Supersampling enabled, sizescale is set to 1.0, DOF quality in prepass set to 2.)  ]]>
+							</description>
+							<image path="Pictures\Quality\4.jpg"/>
+							<files>
+								<folder source="01 - Quality\Insane" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+		<installStep name="Option">
+			<optionalFileGroups>
+				<group name="Color Style" type="SelectExactlyOne">
+					<plugins order="Explicit">
+						<plugin name="Vanilla">
+							<description>
+								<![CDATA[ No color addition, for players who wants vanilla color style of Skyrim. ]]>
+							</description>
+							<image path="Pictures\Color\1.jpg"/>
+							<files>
+								<folder source="02 - Color\Vanilla" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Realistic">
+							<description>
+								<![CDATA[ Close to the color of real world, for players who goes for realism. ]]>
+							</description>
+							<image path="Pictures\Color\2.jpg"/>
+							<files>
+								<folder source="02 - Color\Realistic" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Vivid">
+							<description>
+								<![CDATA[ Best color for gameplay. ]]>
+							</description>
+							<image path="Pictures\Color\3.jpg"/>
+							<files>
+								<folder source="02 - Color\Vivid" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Fantasy">
+							<description>
+								<![CDATA[ For screenshots or specific purposes. ]]>
+							</description>
+							<image path="Pictures\Color\4.jpg"/>
+							<files>
+								<folder source="02 - Color\Fantasy" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Achromatopsia">
+							<description>
+								<![CDATA[ For those who have serious eye problems. :D ]]>
+							</description>
+							<image path="Pictures\Color\5.jpg"/>
+							<files>
+								<folder source="02 - Color\Achromatopsia" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+		<installStep name="Option">
+			<optionalFileGroups>
+				<group name="Night Style" type="SelectExactlyOne">
+					<plugins order="Explicit">
+						<plugin name="Bright">
+							<description>
+								<![CDATA[ Bright but not that bright during day. ]]>
+							</description>
+							<image path="Pictures\Night\1.jpg"/>
+							<files>
+								<folder source="03 - Night\Bright" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Normal">
+							<description>
+								<![CDATA[ Close to the realistic night in my head. ]]>
+							</description>
+							<image path="Pictures\Night\2.jpg"/>
+							<files>
+								<folder source="03 - Night\Normal" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Dark">
+							<description>
+								<![CDATA[ Darker than the normal one, but still can see some details. ]]>
+							</description>
+							<image path="Pictures\Night\3.jpg"/>
+							<files>
+								<folder source="03 - Night\Dark" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Hardcore">
+							<description>
+								<![CDATA[ Can hardly see the ambient.  ]]>
+							</description>
+							<image path="Pictures\Night\4.jpg"/>
+							<files>
+								<folder source="03 - Night\Hardcore" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Nightmare">
+							<description>
+								<![CDATA[ Scary. ]]>
+							</description>
+							<image path="Pictures\Night\5.jpg"/>
+							<files>
+								<folder source="03 - Night\Nightmare" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+		<installStep name="Option">
+			<optionalFileGroups>
+				<group name="DOF Focal Length" type="SelectExactlyOne">
+					<plugins order="Explicit">
+						<plugin name="10mm">
+							<description>
+								<![CDATA[  10mm focal length：best for gameplay ]]>
+							</description>
+							<image path="Pictures\DOF\1.jpg"/>
+							<files>
+								<folder source="04 - DOF\10mm" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="15mm">
+							<description>
+								<![CDATA[ 15mm focal length：best for gameplay ]]>
+							</description>
+							<image path="Pictures\DOF\2.jpg"/>
+							<files>
+								<folder source="04 - DOF\15mm" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="20mm">
+							<description>
+								<![CDATA[ 20mm focal length：for normal screenshots. ]]>
+							</description>
+							<image path="Pictures\DOF\3.jpg"/>
+							<files>
+								<folder source="04 - DOF\20mm" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="25mm">
+							<description>
+								<![CDATA[ 25mm focal length：for close-up photography. ]]>
+							</description>
+							<image path="Pictures\DOF\4.jpg"/>
+							<files>
+								<folder source="04 - DOF\25mm" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="30mm">
+							<description>
+								<![CDATA[ 30mm focal length：for film make or other purposes. ]]>
+							</description>
+							<image path="Pictures\DOF\5.jpg"/>
+							<files>
+								<folder source="04 - DOF\30mm" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+		<installStep name="Option">
+			<optionalFileGroups>
+				<group name="Lensmask" type="SelectExactlyOne">
+					<plugins order="Explicit">
+						<plugin name="Lensmask 1">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (1)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (1)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Lensmask 2">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (2)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (2)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Lensmask 3">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (3)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (3)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Lensmask 4">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (4)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (4)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Lensmask 5">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (5)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (5)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Lensmask 6">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (6)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (6)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Lensmask 7">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (7)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (7)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Lensmask 8">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (8)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (8)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Lensmask 9">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (9)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (9)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Lensmask 10">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (10)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (10)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Lensmask 11">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (11)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (11)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Lensmask 12">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (12)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (12)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Lensmask 13">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (13)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (13)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Lensmask 14">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (14)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (14)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Lensmask 15">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (15)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (15)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Lensmask 16">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (16)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (16)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Lensmask 17">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (17)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (17)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Lensmask 18">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (18)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (18)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Lensmask 19">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (19)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (19)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Lensmask 20">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (20)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (20)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Lensmask 21">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (21)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (21)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Lensmask 22">
+							<description>
+								<![CDATA[ Choose your favorate Lensmask. ]]>
+							</description>
+							<image path="05 - Lensmask\enblensmask (22)\DAHAKA's ENB\enbseries\enblensmask.png"/>
+							<files>
+								<folder source="05 - Lensmask\enblensmask (22)" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+		<installStep name="Option">
+			<optionalFileGroups>
+				<group name="Install Option" type="SelectExactlyOne">
+					<plugins order="Explicit">
+						<plugin name="Autoinstaller">
+							<description>
+								<![CDATA[ After finish the installation, run "DAHAKA's ENB Installer.vbs" in DATA\DAHAKA's ENB to install ENB files automatically. And remember to download the newest ENBSERIES BINARY FILES from Official ENB Website: http://enbdev.com/download_mod_tesskyrim.htm. To uninstall ENB, just run "DAHAKA's ENB Uninstaller.vbs" in DATA\DAHAKA's ENB. ]]>
+							</description>
+							<image path=""/>
+							<files>
+								<folder source="06 - Autoinstaller" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Manual">
+							<description>
+								<![CDATA[ For manual installation, copy files in DATA\DAHAKA's ENB to your Skyrim main folder. Remember to download the newest ENBSERIES BINARY FILES from Official ENB Website: http://enbdev.com/download_mod_tesskyrim.htm. ]]>
+							</description>
+							<image path=""/>
+							<files>
+								<folder source="06 - Manual" destination=""/>
+							</files>
+							<typeDescriptor>
+								<type name="Optional"/>
+							</typeDescriptor>
+						</plugin>
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+	</installSteps>
+</config>
