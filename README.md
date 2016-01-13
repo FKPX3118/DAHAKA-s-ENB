@@ -96,52 +96,41 @@ You can change the hot key in enblocal.ini.
 
 ### Credits And Thanks
 
-Boris Vorontsov for 『ENBSeries』
-
+* Boris Vorontsov for 『ENBSeries』
 http://enbdev.com/index_en.html
 
-Alexander Blade for 『Skyrim ENBHelper』
-
+* Alexander Blade for 『Skyrim ENBHelper』
 http://www.dev-c.com/skyrim/enbhelper/
 
-mindflux for 『Skyrim Snow FX for ENB』
-
+* mindflux for 『Skyrim Snow FX for ENB』
 http://enbdev.com/enbseries/forum/viewtopic.php?f=6&t=1908
 
-MATSO for 『Skyrim Visual Immersion Series ENB Resource』
-
+* MATSO for 『Skyrim Visual Immersion Series ENB Resource』
 http://www.nexusmods.com/skyrim/mods/46871/
 
-kingeric1992 for 『WeatherFX』 『DOF extra & ALF effect』 『enbsunsprite.fx collection』
-
+* kingeric1992 for 『WeatherFX』 『DOF extra & ALF effect』 『enbsunsprite.fx collection』
 http://enbdev.com/enbseries/forum/viewtopic.php?f=7&t=3224
 http://enbdev.com/enbseries/forum/viewtopic.php?f=7&t=3549
 http://enbdev.com/enbseries/forum/viewtopic.php?f=7&t=3293
 
-nanoman2000 for 『FX Raindrops Bitmap』
-
+* nanoman2000 for 『FX Raindrops Bitmap』
 http://www.nexusmods.com/skyrim/mods/68360/
 
-bigeyescarl for 『Next-gen Bloom effect』
-
+* bigeyescarl for 『Next-gen Bloom effect』
 http://www.nexusmods.com/skyrim/mods/55914/
 
-ZeroKing for 『Post-Process Effects Addon for ENB』
-
+* ZeroKing for 『Post-Process Effects Addon for ENB』
 http://www.nexusmods.com/skyrim/mods/50638/
 
-JawZ for 『Sky mesh for ENBSeries』
-
+* JawZ for 『Sky mesh for ENBSeries』
 http://enbdev.com/enbseries/forum/viewtopic.php?f=6&t=1930
 
-amoebae for 『Lens Textures for ENB』
-
+* amoebae for 『Lens Textures for ENB』
 http://www.nexusmods.com/skyrim/mods/45054/
 
-SkyrimTuner for the Autoinstaller Script
-
+* SkyrimTuner for the Autoinstaller Script
 http://www.nexusmods.com/skyrim/mods/55829/
 
-Skyrim ENBSeries Society(滚五ENB研讨社) for help and support.
+* Skyrim ENBSeries Society(滚五ENB研讨社) for help and support.
 
-All my ENB users, downloaders and supporters.
+* All my ENB users, downloaders and supporters.
