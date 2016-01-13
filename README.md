@@ -96,8 +96,7 @@ You can change the hot key in enblocal.ini.
 
 ### Credits And Thanks
 
-* Boris Vorontsov for 『ENBSeries』
-http://enbdev.com/index_en.html
+* Boris Vorontsov for [『ENBSeries』](http://enbdev.com/download_mod_tesskyrim.html)
 
 * Alexander Blade for 『Skyrim ENBHelper』
 http://www.dev-c.com/skyrim/enbhelper/
