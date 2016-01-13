@@ -31,57 +31,69 @@
 <h1>
 <a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h1>
 
+<h3>
+<a id="ini-settings-in-skyrimprefsini" class="anchor" href="#ini-settings-in-skyrimprefsini" aria-hidden="true"><span class="octicon octicon-link"></span></a>INI Settings in Skyrimprefs.ini</h3>
+
 <ul>
-<li><p>INI Settings in Skyrimprefs.ini
-[Display]
-iMaxAnisotropy=0
-fGamma =1.4000
-iWaterMultiSamples=0
-iMultiSample=0
-bTreesReceiveShadows=1
-bDrawLandShadows=1
-bFloatPointRenderTarget=1
-bFXAAEnabled=0
-bShadowsOnGrass=1
-bTransparencyMultisampling=0
-bDeferredShadows=1
-bDrawShadows=1</p></li>
-<li><p>Sorting
-Skyrim.esm
-Update.esm
-Dawnguard.esm
-Dragonborn.esm
-ClimatesOfTamriel.esm
-ClimatesOfTamriel-Dawnguard-Patch.esp
-DAHAKA's Water Plugin.esp
-ClimatesOfTamriel-Dragonborn-Patch.esp
-DAHAKA's COT Plugin.esp
-EnhancedLightsandFX.esp
-ELFX - Dawnguard.esp
-ELFX - Dragonborn.esp</p></li>
-<li><p>Incompatible ESPs
-ELFX - Exteriors.esp
-ClimatesOfTamriel-Interiors-Warm.esp
-ClimatesOfTamriel-Interiors-Cold.esp
-ClimatesOfTamriel-Dungeons-Hazardous.esp
-ClimatesOfTamriel-Dungeons-Hardcore.esp
-Realistic Lighting Overhaul - Dungeons.esp
-Realistic Lighting Overhaul - Major City Exteriors.esp
-Realistic Lighting Overhaul - Major City Interiors.esp
-Realistic Lighting Overhaul - Minor Cities and Town Interiors.esp
-Realistic Lighting Overhaul - Weathers.esp
-CoT-WeatherPatch.esp
-Supreme Storms - Cot Version.esp
-Pureweather.esp
-Natural Lighting and Atmospherics.esp
-Shadows - Dawnguard.esp
-Shadows - Skyrim.esp
-Shadows - Weather Tweaks.esp
-Realistic Lighting - Full.esp
-RealShelter.esp
-RelightingSkyrim.esp
-TrueStorms.esp
-TrueStorms-ClimatesOfTamriel.esp</p></li>
+<li><code>[Display]</code></li>
+<li><code>iMaxAnisotropy=0</code></li>
+<li><code>fGamma =1.4000</code></li>
+<li><code>iWaterMultiSamples=0</code></li>
+<li><code>iMultiSample=0</code></li>
+<li><code>bTreesReceiveShadows=1</code></li>
+<li><code>bDrawLandShadows=1</code></li>
+<li><code>bFloatPointRenderTarget=1</code></li>
+<li><code>bFXAAEnabled=0</code></li>
+<li><code>bShadowsOnGrass=1</code></li>
+<li><code>bTransparencyMultisampling=0</code></li>
+<li><code>bDeferredShadows=1</code></li>
+<li><code>bDrawShadows=1</code></li>
+</ul>
+
+<h3>
+<a id="sorting" class="anchor" href="#sorting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sorting</h3>
+
+<ul>
+<li>Skyrim.esm</li>
+<li>Update.esm</li>
+<li>Dawnguard.esm</li>
+<li>Dragonborn.esm</li>
+<li>ClimatesOfTamriel.esm</li>
+<li>ClimatesOfTamriel-Dawnguard-Patch.esp</li>
+<li>DAHAKA's Water Plugin.esp</li>
+<li>ClimatesOfTamriel-Dragonborn-Patch.esp</li>
+<li>DAHAKA's COT Plugin.esp</li>
+<li>EnhancedLightsandFX.esp</li>
+<li>ELFX - Dawnguard.esp</li>
+<li>ELFX - Dragonborn.esp</li>
+</ul>
+
+<h3>
+<a id="incompatible-esps" class="anchor" href="#incompatible-esps" aria-hidden="true"><span class="octicon octicon-link"></span></a>Incompatible ESPs</h3>
+
+<ul>
+<li>ELFX - Exteriors.esp</li>
+<li>ClimatesOfTamriel-Interiors-Warm.esp</li>
+<li>ClimatesOfTamriel-Interiors-Cold.esp</li>
+<li>ClimatesOfTamriel-Dungeons-Hazardous.esp</li>
+<li>ClimatesOfTamriel-Dungeons-Hardcore.esp</li>
+<li>Realistic Lighting Overhaul - Dungeons.esp</li>
+<li>Realistic Lighting Overhaul - Major City Exteriors.esp</li>
+<li>Realistic Lighting Overhaul - Major City Interiors.esp</li>
+<li>Realistic Lighting Overhaul - Minor Cities and Town Interiors.esp</li>
+<li>Realistic Lighting Overhaul - Weathers.esp</li>
+<li>CoT-WeatherPatch.esp</li>
+<li>Supreme Storms - Cot Version.esp</li>
+<li>Pureweather.esp</li>
+<li>Natural Lighting and Atmospherics.esp</li>
+<li>Shadows - Dawnguard.esp</li>
+<li>Shadows - Skyrim.esp</li>
+<li>Shadows - Weather Tweaks.esp</li>
+<li>Realistic Lighting - Full.esp</li>
+<li>RealShelter.esp</li>
+<li>RelightingSkyrim.esp</li>
+<li>TrueStorms.esp</li>
+<li>TrueStorms-ClimatesOfTamriel.esp</li>
 </ul>
 
 <h1>
@@ -100,22 +112,28 @@ TrueStorms-ClimatesOfTamriel.esp</p></li>
 <li>"File XXX is not active" shows up when you install the fomod file with your manager？</li>
 </ul>
 
+<blockquote>
 <p>This means you didn't install COT or ELFX in advance，and the fomod installer will abort. See the requirements above. Do not install any MOD which tweaks the weather IDs or lighting parameters (RLO、Pure weather、COT weather patch、RCRN、Relighting Skyrim、Shadows、NLA).</p>
+</blockquote>
 
 <ul>
 <li>No ENB effect in game after you finish the fomod installation？</li>
 </ul>
 
+<blockquote>
 <p>If you choose Autoinstaller, run "DAHAKA's ENB Installer.vbs" in DATA\DAHAKA's ENB to install ENB files automatically.
 If you choose Manual, copy files in DATA\DAHAKA's ENB to your Skyrim main folder.
-Remember to download the newest ENBSERIES BINARY FILES from Official ENB Website: <a href="http://enbdev.com/download_mod_tesskyrim.htm">http://enbdev.com/download_mod_tesskyrim.htm</a></p>
+Remember to download the newest ENBSERIES BINARY FILES from <a href="http://enbdev.com/download_mod_tesskyrim.htm">Official ENB Website</a></p>
+</blockquote>
 
 <ul>
 <li>Hot Key？</li>
 </ul>
 
+<blockquote>
 <p>Open ENB GUI    ————  shift + backspace
 You can change the hot key in enblocal.ini.</p>
+</blockquote>
 
 <h1>
 <a id="credits-and-thanks" class="anchor" href="#credits-and-thanks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Credits And Thanks</h1>
