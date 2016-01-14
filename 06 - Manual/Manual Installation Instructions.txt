@@ -1,0 +1,2 @@
+For manual installation, copy files in DATA\DAHAKA's ENB to your Skyrim main folder.
+Remember to download the newest ENBSERIES BINARY FILES from Official ENB Website: http://enbdev.com/download_mod_tesskyrim.htm.
