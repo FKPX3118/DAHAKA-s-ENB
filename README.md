@@ -31,7 +31,6 @@
 * Dragonborn.esm
 * ClimatesOfTamriel.esm
 * ClimatesOfTamriel-Dawnguard-Patch.esp
-* DAHAKA's Water Plugin.esp
 * ClimatesOfTamriel-Dragonborn-Patch.esp
 * DAHAKA's COT Plugin.esp
 * EnhancedLightsandFX.esp
