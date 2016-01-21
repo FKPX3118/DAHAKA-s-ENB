@@ -4,6 +4,7 @@ BETA 4
 2.Some tweaks of tone and weather to make the day less bright.
 3.New UIname for bloom fx, now you can tweak bloom parameters in game.
 4.Tweak gamma and desaturated shadow to make it less catoonish.
+5.Improve FPS.
 
 
 
