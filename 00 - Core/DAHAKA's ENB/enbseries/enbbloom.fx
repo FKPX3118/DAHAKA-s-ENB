@@ -21,7 +21,7 @@
 #define ENABLE_LENZ_REFLECTION  	// Enable Lenz Reflection. Only use one lenz below.
 #define USE_LENZ_SHARP          	// Use sharp reflections in lenz.
 #define USE_LENZ_FUZZY          	// Use fuzzy reflections in lenz. 
-//#define USE_LENZ_BLURRY         	// Use blurry reflections in lenz.
+#define USE_LENZ_BLURRY         	// Use blurry reflections in lenz.
 #define USE_LENZ_FILTER         	// Use filter colors for reflections, rather than simply tinting the lens reflection.
 
 //////////////////////////
@@ -30,19 +30,43 @@
 
 // Bloom settings
 // NOTE: High bloom curves can cause a posterized look to bloom with multiple blur layers active.
-float fBloomCurve = 0.6;			// Controls spread of brighter parts of bloom. Higher = Wider. Range is 0.2-2.
-float fBloomDistance = 6;			// Controls initial spread of bloom samples (in pixels). Range is 1.0+.
-float fBloomMult1 = 0.0;         	// Controls the amount of original image in bloom. Range is 0-1.
-float fBloomMult2 = 1.0;         	// Controls the amount of the initial blur spread in bloom. Range is 0-1.
-float fBloomMult3 = 0.86;         	// Controls the amount of 10px blur. Range is 0-1.
-float fBloomMult4 = 0.86;         	// Controls the amount of 20px blur. Range is 0-1.
-float fBloomMult5 = 0.10;         	// Controls the amount of 40px blur. Range is 0-1.
-float fBloomMult6 = 0.08;         	// Controls the amount of 80px blur. Range is 0-1.
-float fBloomMult7 = 0.06;         	// Controls the amount of 160px blur. Range is 0-1.
-float fBloomMult8 = 0.04;         	// Controls the amount of 320px blur. Range is 0-1.
+
+float fBloomCurve < string UIName="BloomCurve"; string UIWidget="Spinner"; float UIMin=0.2; float UIMax=2.0; > = 0.4;		       	
+// Controls spread of brighter parts of bloom. Higher = Wider. Range is 0.2-2.
+
+float fBloomDistance < string UIName="BloomDistance"; string UIWidget="Spinner"; float UIMin=2.0; float UIMax=10.0; > = 6;						
+// Controls initial spread of bloom samples (in pixels). Range is 1.0+.
+
+float fBloomMult1 < string UIName="Amount"; string UIWidget="Spinner"; float UIMin=0; float UIMax=1.0; > = 0.0;        	 	
+// Controls the amount of original image in bloom. Range is 0-1.
+
+float fBloomMult2 < string UIName="Initial Blur"; string UIWidget="Spinner"; float UIMin=0; float UIMax=1.0; > = 1.0;         		
+// Controls the amount of the initial blur spread in bloom. Range is 0-1.
+
+float fBloomMult3 < string UIName="10px Blur"; string UIWidget="Spinner"; float UIMin=0; float UIMax=1.0; > = 0.86;         	
+// Controls the amount of 10px blur. Range is 0-1.
+
+float fBloomMult4 < string UIName="20px Blur"; string UIWidget="Spinner"; float UIMin=0; float UIMax=1.0; > = 0.64;         	
+// Controls the amount of 20px blur. Range is 0-1.
+
+float fBloomMult5 < string UIName="40px Blur"; string UIWidget="Spinner"; float UIMin=0; float UIMax=1.0; > = 0.32;         	
+// Controls the amount of 40px blur. Range is 0-1.
+
+float fBloomMult6 < string UIName="80px Blur"; string UIWidget="Spinner"; float UIMin=0; float UIMax=1.0; > = 0.16;         	
+// Controls the amount of 80px blur. Range is 0-1.
+
+float fBloomMult7 < string UIName="160px Blur"; string UIWidget="Spinner"; float UIMin=0; float UIMax=1.0; > = 0.08;         	
+// Controls the amount of 160px blur. Range is 0-1.
+
+float fBloomMult8 < string UIName="320px Blur"; string UIWidget="Spinner"; float UIMin=0; float UIMax=1.0; > = 0.04;         	
+// Controls the amount of 320px blur. Range is 0-1.
+
+
 
 // Lenz settings
-float LenzScalar = 2.0;         	// Controls overall Lenz reflection intensity.
+
+float LenzScalar < string UIName="LenzScalar"; string UIWidget="Spinner"; float UIMin=0; float UIMax=10.0; > = 2.0;         	
+// Controls overall Lenz reflection intensity.
 const float3 LenzOffset[4]={    	// Controls the deepness, curvature, inverse size of the four lens reflections.
 	float3(1.6, 4.0, 1.0),
 	float3(0.7, 0.25, 2.0),

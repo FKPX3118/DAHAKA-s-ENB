@@ -285,12 +285,7 @@ if VRAMamount > 0 then
 	end if
 	end if
 
-	'Windows: " & windowsversion & " Karte: " & cardname & " VRAM: " & VRAMamount & " RAM: " & SYSRAMamount 
-
-	' ---ExpandSystemMemoryX64---
-	if instr(windowsversion,"32") > 0 then 
-		addstring "false", "ExpandSystemMemoryX64"
-	end if
+	'Karte: " & cardname & " VRAM: " & VRAMamount & " RAM: " & SYSRAMamount 
 	
 	' ---VideoMemorySizeMb---
 	addstring VRAMamount+SYSRAMamount-2048, "VideoMemorySizeMb"

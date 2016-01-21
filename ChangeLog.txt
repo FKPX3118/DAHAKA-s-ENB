@@ -1,3 +1,12 @@
+2016.1.21
+BETA 4
+1.This BETA release is an emergency fix of lens and spell problems.
+2.Some tweaks of tone and weather to make the day less bright.
+3.New UIname for bloom fx, now you can tweak bloom parameters in game.
+4.Tweak gamma and desaturated shadow to make it less catoonish.
+
+
+
 2016.1.20
 BETA 3
 1.Optimized tonemapping oversaturation and balanced level parameters.
