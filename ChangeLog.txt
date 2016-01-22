@@ -1,3 +1,12 @@
+2016.1.23
+BETA 5
+1.Improved shadow rendered by skylighting, no more pure black shadow.
+2.Added new textures to fix shock spell glow problems.
+3.Softer direct lighting but decreased the max eye adaption.
+4.Some small tweaks of weather parameters.
+
+
+
 2016.1.21
 BETA 4
 1.This BETA release is an emergency fix of lens and spell problems.
