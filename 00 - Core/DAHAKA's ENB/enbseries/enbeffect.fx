@@ -16,7 +16,7 @@ float	fAdaptationMinDay
 	string UIName="A: Adaptation min day";
 	string UIWidget="Spinner";
 	float UIMin=0.0;
-	float UIMax=2.0;
+	float UIMax=10.0;
 > = {0.05};
 
 float	fAdaptationMaxDay
@@ -24,7 +24,7 @@ float	fAdaptationMaxDay
 	string UIName="A: Adaptation max day";
 	string UIWidget="Spinner";
 	float UIMin=0.0;
-	float UIMax=2.0;
+	float UIMax=10.0;
 > = {0.125};
 
 // Night
@@ -33,7 +33,7 @@ float	fAdaptationMinNight
 	string UIName="A: Adaptation min night";
 	string UIWidget="Spinner";
 	float UIMin=0.0;
-	float UIMax=2.0;
+	float UIMax=10.0;
 > = {0.2};
 
 float	fAdaptationMaxNight
@@ -41,7 +41,7 @@ float	fAdaptationMaxNight
 	string UIName="A: Adaptation max night";
 	string UIWidget="Spinner";
 	float UIMin=0.0;
-	float UIMax=2.0;
+	float UIMax=10.0;
 > = {0.225};
 
 // Interior
@@ -50,7 +50,7 @@ float	fAdaptationMinInterior
 	string UIName="A: Adaptation min interior";
 	string UIWidget="Spinner";
 	float UIMin=0.0;
-	float UIMax=2.0;
+	float UIMax=10.0;
 > = {0.15};
 
 float	fAdaptationMaxInterior
@@ -58,7 +58,7 @@ float	fAdaptationMaxInterior
 	string UIName="A: Adaptation max interior";
 	string UIWidget="Spinner";
 	float UIMin=0.0;
-	float UIMax=2.0;
+	float UIMax=10.0;
 > = {0.225};
 
 //-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,3 +1,11 @@
+2016.1.25
+BETA 6
+1.Brightness and Gamma balance.
+2.Fix bugs.
+3.Some small tweaks of weather parameters.
+
+
+
 2016.1.23
 BETA 5
 1.Improved shadow rendered by skylighting, no more pure black shadow.
