@@ -1,3 +1,12 @@
+2016.1.27
+BETA 7
+1.Tonemapping and brightness tweak.
+2.Fix an issue with the script.
+3.Interior brightness tweaks.
+4.Some small tweaks of weather parameters.
+
+
+
 2016.1.25
 BETA 6
 1.Brightness and Gamma balance.
