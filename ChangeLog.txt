@@ -1,3 +1,12 @@
+2016.1.29
+BETA 8
+1.A new Tonemapping method, may cause some problems.
+2.Ambient color tweak for Night and Interior.
+3.Narrow down the range of the color option.
+4.Some small tweaks of weather parameters.
+
+
+
 2016.1.27
 BETA 7
 1.Tonemapping and brightness tweak.
