@@ -12,7 +12,7 @@
 ### INI Settings in Skyrimprefs.ini
 * `[Display]`
 * `iMaxAnisotropy=0`
-* `fGamma =1.4000`
+* `fGamma =1.0000`
 * `iWaterMultiSamples=0`
 * `iMultiSample=0`
 * `bTreesReceiveShadows=1`
