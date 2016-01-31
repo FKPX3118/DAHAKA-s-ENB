@@ -1,3 +1,12 @@
+2016.1.31
+BETA 9
+1.Fix the Tonemapping problems.
+2.Fix the Adaption bug.
+3.Fix the ambient fog bug in COT plugin.
+4.A lot of tweaks of weather parameters.
+
+
+
 2016.1.29
 BETA 8
 1.A new Tonemapping method, may cause some problems.
