@@ -1,3 +1,12 @@
+2016.2.5
+BETA 11
+1.Add support for ENBSeries v0.302.
+2.Adjust Day brightness.
+3.Adjust Night ambient color and brightness.
+4.Some tweaks of weather parameters.
+
+
+
 2016.1.31
 BETA 10
 1.Add support for ENBSeries v0.301.
