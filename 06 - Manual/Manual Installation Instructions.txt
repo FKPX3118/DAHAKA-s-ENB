@@ -1,4 +1,10 @@
-For manual installation:
-1.copy files in DATA\DAHAKA's ENB to your Skyrim main folder.
-2.Remember to download the newest ENBSERIES BINARY FILES from Official ENB Website: http://enbdev.com/download_mod_tesskyrim.htm.
-3.Set your enblocal.ini according to your rig.
+For manual installation
+
+STEP 1:
+copy files in DATA\DAHAKA's ENB to your Skyrim main folder.
+
+STEP 2:
+Remember to download the newest ENBSERIES BINARY FILES from Official ENB Website: http://enbdev.com/download_mod_tesskyrim.htm.
+
+STEP 3:
+Set your enblocal.ini according to your rig.

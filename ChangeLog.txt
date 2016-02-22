@@ -1,3 +1,12 @@
+2016.2.22
+BETA 12
+1.Add support for ENBSeries v0.303.
+2.Tonemapping and brightness tweak.
+3.Some tweaks of weather parameters.
+4.A better TimeofDay method, more natural dawn & dusk transition.
+
+
+
 2016.2.5
 BETA 11
 1.Add support for ENBSeries v0.302.
