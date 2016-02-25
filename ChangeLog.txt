@@ -1,220 +1,229 @@
+2016.2.25
+BETA 13
+* Add support for ENBSeries v0.304.
+* Brightness tweak.
+* Darker interior.
+* A lot of bug fixes and weaks of weather parameters.
+
+
+
 2016.2.22
 BETA 12
-1.Add support for ENBSeries v0.303.
-2.Tonemapping and brightness tweak.
-3.Some tweaks of weather parameters.
-4.A better TimeofDay method, more natural dawn & dusk transition.
+* Add support for ENBSeries v0.303.
+* Tonemapping and brightness tweak.
+* Some tweaks of weather parameters.
+* A better TimeofDay method, more natural dawn & dusk transition.
 
 
 
 2016.2.5
 BETA 11
-1.Add support for ENBSeries v0.302.
-2.Adjust Day brightness.
-3.Adjust Night ambient color and brightness.
-4.Some tweaks of weather parameters.
+* Add support for ENBSeries v0.302.
+* Adjust Day brightness.
+* Adjust Night ambient color and brightness.
+* Some tweaks of weather parameters.
 
 
 
 2016.1.31
 BETA 10
-1.Add support for ENBSeries v0.301.
-2.Some small tweaks of weather parameters.
+* Add support for ENBSeries v0.301.
+* Some small tweaks of weather parameters.
 
 
 
 2016.1.31
 BETA 9
-1.Fix the Tonemapping problems.
-2.Fix the Adaption bug.
-3.Fix the ambient fog bug in COT plugin.
-4.A lot of tweaks of weather parameters.
+* Fix the Tonemapping problems.
+* Fix the Adaption bug.
+* Fix the ambient fog bug in COT plugin.
+* A lot of tweaks of weather parameters.
 
 
 
 2016.1.29
 BETA 8
-1.A new Tonemapping method, may cause some problems.
-2.Ambient color tweak for Night and Interior.
-3.Narrow down the range of the color option.
-4.Some small tweaks of weather parameters.
+* A new Tonemapping method, may cause some problems.
+* Ambient color tweak for Night and Interior.
+* Narrow down the range of the color option.
+* Some small tweaks of weather parameters.
 
 
 
 2016.1.27
 BETA 7
-1.Tonemapping and brightness tweak.
-2.Fix an issue with the script.
-3.Interior brightness tweaks.
-4.Some small tweaks of weather parameters.
+* Tonemapping and brightness tweak.
+* Fix an issue with the script.
+* Interior brightness tweaks.
+* Some small tweaks of weather parameters.
 
 
 
 2016.1.25
 BETA 6
-1.Brightness and Gamma balance.
-2.Fix bugs.
-3.Some small tweaks of weather parameters.
+* Brightness and Gamma balance.
+* Fix bugs.
+* Some small tweaks of weather parameters.
 
 
 
 2016.1.23
 BETA 5
-1.Improved shadow rendered by skylighting, no more pure black shadow.
-2.Added new textures to fix shock spell glow problems.
-3.Softer direct lighting but decreased the max eye adaption.
-4.Some small tweaks of weather parameters.
+* Improved shadow rendered by skylighting, no more pure black shadow.
+* Added new textures to fix shock spell glow problems.
+* Softer direct lighting but decreased the max eye adaption.
+* Some small tweaks of weather parameters.
 
 
 
 2016.1.21
 BETA 4
-1.This BETA release is an emergency fix of lens and spell problems.
-2.Some tweaks of tone and weather to make the day less bright.
-3.New UIname for bloom fx, now you can tweak bloom parameters in game.
-4.Tweak gamma and desaturated shadow to make it less catoonish.
-5.Improve FPS.
+* This BETA release is an emergency fix of lens and spell problems.
+* Some tweaks of tone and weather to make the day less bright.
+* New UIname for bloom fx, now you can tweak bloom parameters in game.
+* Tweak gamma and desaturated shadow to make it less catoonish.
+* Improve FPS.
 
 
 
 2016.1.20
 BETA 3
-1.Optimized tonemapping oversaturation and balanced level parameters.
-2.Fix SubSurfaceScattering bugs.
-3.New lighting method to make clear weather more natural.
-4.A lot of small tweaks with multiple weather parameters.
+* Optimized tonemapping oversaturation and balanced level parameters.
+* Fix SubSurfaceScattering bugs.
+* New lighting method to make clear weather more natural.
+* A lot of small tweaks with multiple weather parameters.
 
 
 
 2016.1.14
 BETA 2
-1.Back to the old tonemapping in version 1.0.0.
-2.Improvements on the skin.
-3.Tweak multiple weather parameters.
+* Back to the old tonemapping in version 1.0.0.
+* Improvements on the skin.
+* Tweak multiple weather parameters.
 
 
 
 2016.1.11
 BETA 1
-1.Removed Water Plugin.
-2.New tonemapping and brightness.
-3.Multiple weather adjustments.
-4.Add a new frost mask.
-5.A lot of new features without public tests.
+* Removed Water Plugin.
+* New tonemapping and brightness.
+* Multiple weather adjustments.
+* Add a new frost mask.
+* A lot of new features without public tests.
 
 
 
 2015.8.25
 ALPHA 5 {final alpha}
-1.Removed ELFXEnhancer.esp from the required esp list. But you can activate it if you want.
-2.A lot of weather parameter tweaks.
-3.Absolutely balanced tone and brightness.
-4.Added rain desaturation parameters in effect.txt.
-5.Fixed some problems of the fomod installation.
+* Removed ELFXEnhancer.esp from the required esp list. But you can activate it if you want.
+* A lot of weather parameter tweaks.
+* Absolutely balanced tone and brightness.
+* Added rain desaturation parameters in effect.txt.
+* Fixed some problems of the fomod installation.
 
  
 
 2015.8.6
 ALPHA 4
-1.Added shadow desaturation.
-2.Changed tonemapping and contrast.
-3.New rain drop code for different shapes of droplet.
-4.Added Night Option in fomod installation.
-5.Multiple weather tweaks.
-6.Changed some parameters in SSAO and SSS.
+* Added shadow desaturation.
+* Changed tonemapping and contrast.
+* New rain drop code for different shapes of droplet.
+* Added Night Option in fomod installation.
+* Multiple weather tweaks.
+* Changed some parameters in SSAO and SSS.
 
  
 
 2015.7.26
 ALPHA 3
-1.Decrease Adaption sensitivity at Day.
-2.Add black level to interior and Day.
-3.A lot of multiple weather tweaks because of the changes above.
-4.Add ambient color to interior instead of pure black.
-5.Now the night should be darker.
-6.A new normal map for water plugin.
+* Decrease Adaption sensitivity at Day.
+* Add black level to interior and Day.
+* A lot of multiple weather tweaks because of the changes above.
+* Add ambient color to interior instead of pure black.
+* Now the night should be darker.
+* A new normal map for water plugin.
 
 
 
 2015.7.19
 ALPHA 2
-1.Tweaked Eye Adaption.
-2.Change water color in weather form ID.
-3.Small tweaks for multiple weather.
+* Tweaked Eye Adaption.
+* Change water color in weather form ID.
+* Small tweaks for multiple weather.
 
  
 
 2015.7.15
 ALPHA 1
 First ALPHA release with many new features:
-1.Dark dungeons.
-2.New tonemapping and balanced brightness.
-3.New ambient color and lighting.
+* Dark dungeons.
+* New tonemapping and balanced brightness.
+* New ambient color and lighting.
 
  
 
 2015.3.24
 0.9.9.17
-Believe or not. This is really the last test release.
+* Believe or not. This is really the last test release.
 
  
 
 2015.3.6
 0.9.9.16
-REAL Last test release.
+* REAL Last test release.
 
  
 
 2015.2.27
 0.9.9.15
-Last test release.
+* Last test release.
 
  
 
 2015.2.17
 0.9.9.14
-Removed nighteye code. Quality options redone. Brightness and tone still in final adjustment. May be the last test release.
+* Removed nighteye code. Quality options redone. Brightness and tone still in final adjustment. May be the last test release.
 
  
 
 2015.2.14
 0.9.9.13
-Removed Sweetfx and balanced brightness and tone. May be the last test release.
+* Removed Sweetfx and balanced brightness and tone. May be the last test release.
 
  
 
 2015.2.11
 0.9.9.12
-Final tweak and may be the last test release.
+* Final tweak and may be the last test release.
 
  
 
 2015.2.7
 0.9.9.11
-Final tweak and tone adjusted.
+* Final tweak and tone adjusted.
 
  
 
 2015.2.5
 0.9.9.10
-Some bug fixed and tone tweaked.
+* Some bug fixed and tone tweaked.
 
  
 
 2015.1.31
 0.9.9.9
-WIP version tested with hodilton.
+* WIP version tested with hodilton.
 
  
 
 2014.12.18
 0.9.9.8
-1.COT plugin tweaked for better sky color.
-2.Autoinstaller script bug fixed.
-3.Multiple weather parameters adjusted.
-4.NMM preview image remade.
+* COT plugin tweaked for better sky color.
+* Autoinstaller script bug fixed.
+* Multiple weather parameters adjusted.
+* NMM preview image remade.
 
 
 
 2014.7.6
-version 0.9.0 initial release
+* version 0.9.0 initial release
