@@ -1,9 +1,18 @@
+2016.3.23
+BETA 14
+* Add support for ENBSeries v0.305 with DawnDusk enabled.
+* Add support for ELFX 3.01+.
+* Some tweaks of weather parameters.
+* Brightness tweak.
+
+
+
 2016.2.25
 BETA 13
 * Add support for ENBSeries v0.304.
 * Brightness tweak.
 * Darker interior.
-* A lot of bug fixes and weaks of weather parameters.
+* A lot of bug fixes and tweaks of weather parameters.
 
 
 

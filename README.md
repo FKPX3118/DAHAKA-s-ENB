@@ -4,7 +4,7 @@
 
 * The installation supports MO (Mod Organizer) and NMM (Nexus Mod Manager). With the installer you can easily choose the quality level, color level, night brightness, the focus length in DOF and a bunch of ENBlens styles.
 
-* This ENB is designed for Climates Of Tamriel 5.0 and Enhanced Lights and FX 2.0+.
+* This ENB is designed for Climates Of Tamriel 5.0 and Enhanced Lights and FX.
 
 
 # Requirements
@@ -34,8 +34,6 @@
 * ClimatesOfTamriel-Dragonborn-Patch.esp
 * DAHAKA's COT Plugin.esp
 * EnhancedLightsandFX.esp
-* ELFX - Dawnguard.esp
-* ELFX - Dragonborn.esp
 
 ### Incompatible ESPs
 * ELFX - Exteriors.esp
