@@ -1,3 +1,15 @@
+2016.3.31
+BETA 15
+* More natural color of dawn and dusk.
+* New tonemapping method of Night and Interior.
+* Balanced Daytime brightness.
+* A lot of tweaks of weather parameters.
+* Fix Bugs of weather and global settings.
+* ESP update for more natural water color.
+* Add compatible wave textures.
+
+
+
 2016.3.23
 BETA 14
 * Add support for ENBSeries v0.305 with DawnDusk enabled.
