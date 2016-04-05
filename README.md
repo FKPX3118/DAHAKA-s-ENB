@@ -94,7 +94,7 @@
 
 * Alexander Blade for [『Skyrim ENBHelper』](http://www.dev-c.com/skyrim/enbhelper/)
 
-* mindflux for [『Skyrim Snow FX for ENB』](http://enbdev.com/enbseries/forum/viewtopic.php?f=6&t=1908)
+* mindflux for [『Skyrim Snow FX for ENB』](http://enbdev.com/enbseries/forum/viewtopic.php?f=6&t=1908) [『Skyrim Particle Patch for ENB』](http://enbseries.enbdev.com/forum/viewtopic.php?t=1499)
 
 * MATSO for [『Skyrim Visual Immersion Series ENB Resource』](http://www.nexusmods.com/skyrim/mods/46871/)
 
