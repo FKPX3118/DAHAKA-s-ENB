@@ -1,3 +1,12 @@
+2016.4.5
+BETA 16
+* Fix interior bugs.
+* Some tweaks of weather parameters.
+* Try some new tonemapping and gamma methods but find that the previous one is the best.
+* Add compatible spider web textures.
+
+
+
 2016.3.31
 BETA 15
 * More natural color of dawn and dusk.
