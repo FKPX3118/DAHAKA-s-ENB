@@ -94,8 +94,6 @@
 
 * Alexander Blade for [『Skyrim ENBHelper』](http://www.dev-c.com/skyrim/enbhelper/)
 
-* mindflux for [『Skyrim Snow FX for ENB』](http://enbdev.com/enbseries/forum/viewtopic.php?f=6&t=1908) [『Skyrim Particle Patch for ENB』](http://enbseries.enbdev.com/forum/viewtopic.php?t=1499)
-
 * MATSO for [『Skyrim Visual Immersion Series ENB Resource』](http://www.nexusmods.com/skyrim/mods/46871/)
 
 * kingeric1992 for [『WeatherFX』](http://enbdev.com/enbseries/forum/viewtopic.php?f=7&t=3293) [『DOF extra & ALF effect』](http://enbdev.com/enbseries/forum/viewtopic.php?f=7&t=3224) [『enbsunsprite.fx collection』](http://enbdev.com/enbseries/forum/viewtopic.php?f=7&t=3549) 

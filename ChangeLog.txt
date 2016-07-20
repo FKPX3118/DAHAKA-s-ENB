@@ -1,3 +1,15 @@
+2016.7.20
+BETA 17
+* New tonemapping and gamma method.
+* A lot of bug fixes tweaks of weather parameters.
+* Remove some unnecessary files.
+* Compatible with Real Clouds.
+* Fix lag issue.
+* Brighter nights and interior.
+* Update esp for new TOD and effect lighting.
+
+
+
 2016.4.5
 BETA 16
 * Fix interior bugs.
