@@ -13,19 +13,16 @@ SPIKE.esm
 RSkyrimChildren.esm
 ClimatesOfTamriel-Sound.esp
 EnhancedLightsandFX.esp
-ELFX - Dragonborn.esp
 All Geared Up.esp
 iHUD.esp
 KrittaKitty_horses_uniqueFrost.esp
 Fusax2.esp
 ETaC - Complete.esp
-ETaC - Complete RS Patch.esp
 headtrack.esp
 Enhanced Landscapes.esp
-ELFX - Dawnguard.esp
+ELFX - Exteriors.esp
 EnhancedWetnessandPuddles.esp
 ETaC - Dragon Bridge South.esp
-ETaC - Complete ELFX Patch.esp
 Verdant - A Skyrim Grass Plugin.esp
 Prometheus_No_snow_Under_the_roof.esp
 Enhanced Landscapes - Marsh Pines.esp
@@ -36,22 +33,14 @@ EnhancedCharacterEdit.esp
 FNIS.esp
 SkyUI.esp
 XPMSE.esp
-TrueStorms.esp
 JKs Skyrim Major Cities.esp
 PWwaterfall.esp
-Book Covers Skyrim.esp
-Skyrim Immersive Creatures.esp
-fallentreebridges.esp
-Immersive Orc Strongholds.esp
-Enhanced Landscapes - Oaks.esp
-[JmV]LTTF.esp
 Guard Dialogue Overhaul.esp
 DeadlyDragons.esp
 ClimatesOfTamriel-Dawnguard-Patch.esp
 WetandCold.esp
 WetandCold - Ashes.esp
 ClimatesOfTamriel-Dragonborn-Patch.esp
-DAHAKA's COT Plugin.esp
 Headtracking.esp
 Hothtrooper44_Armor_Ecksstra.esp
 Craftable Soulstoneswithblack.esp
@@ -68,79 +57,96 @@ Smoking Torches.esp
 Realistic Teeth Dawnguard Serana Vampire Fix.esp
 DSerHorsesRevamped.esp
 Dual Sheath Redux.esp
-TrueStorms-ClimatesOfTamriel.esp
-83Willows_101BUGS_V4_HighRes_HighSpawn.esp
-Beards.esp
-Better Dynamic Snow.esp
-BF.esp
-BFSEffects.esp
-Brows.esp
-CL BladeofSacrifice.esp
-CL Nettlebane.esp
-dD - Enhanced Blood Main.esp
-DeadlySpellImpacts.esp
-DeadlySpellImpacts - Two Fire.esp
-Gri_BeastFeet.esp
-ImprovedFireyFireSalts.esp
-ImprovedFrostyFrostSalts.esp
-Prometheus_NSUTR BDS Patch.esp
-RAIN.esp
-Real Roads.esp
-Realistic HD Beverages.esp
-RSChildren - Complete.esp
-RSChildren_PatchUSKP.esp
-RUSTIC SOULGEMS - Unsorted.esp
+mintylightningmod.esp
+MintyLightningMod_COT_Patch.esp
+ETaC - Complete ELFX Patch.esp
+Book Covers Skyrim.esp
+Skyrim Immersive Creatures.esp
+fallentreebridges.esp
+Immersive Orc Strongholds.esp
+Enhanced Landscapes - Oaks.esp
+[JmV]LTTF.esp
 SkyFalls + SkyMills + DG + DB.esp
-RBB - Snow Merge.esp
+Realistic Boat Bobbing.esp
 Skyrim Immersive Creatures - DLC2.esp
 Immersive Solstheim.esp
 AshesOfTheRedMountain.esp
 Enhanced Landscapes - Solstheim.esp
+aMidianBorn_ContentAddon.esp
 SkyFalls Dragonborn Small waterfalls.esp
 RealisticWaterTwo.esp
-aMidianBorn_ContentAddon.esp
 Hothtrooper44_ArmorCompilation.esp
-ETaC - Complete NoSnow Patch.esp
-ETaC - Better Dynamic Snow Patch.esp
-Tamriel Reloaded Mountains.esp
-RealisticWaterTwo - Legendary.esp
 BosmericDrunkenHuntsmanReborn.esp
+ETaC - Complete NoSnow Patch.esp
+RealisticWaterTwo - Legendary.esp
 Cloaks.esp
 Skysan_ELFX_SMIM_Fix.esp
 SMIM-Merged-All.esp
 SkyrimImprovedPuddles-DG-HF-DB.esp
 Enhanced Landscapes - DLC Patch.esp
-Cloaks - Dawnguard.esp
 DungeonQuestAwareness.esp
-WATER Plants.esp
+LandscapeOverhaul_Stoneswalls.esp
+SolitudeExterior.esp
 Blacksmithforge water fix DB.esp
 Blacksmithforge water fix Vanilla.esp
-BLESSINGS - Altar Descriptions.esp
-PilgrimsDelight.esp
-Skyrim_Ice_Shader_Fix.esp
 NorthernMaiden.esp
-BlockSparkles.esp
-Chesko_Step418_SN.esp
-RBB - Row Boats - Hearthfire Hotfix.esp
-BentPines_for_SFO2.0.esp
+Better Dynamic Snow.esp
+ETaC - Better Dynamic Snow Patch.esp
+dD - Enhanced Blood Main.esp
+ETaC - Complete RS Patch.esp
+RemoveSmoke.esp
+DAHAKA's COT Plugin.esp
+DesyncBirdsOfPrey.esp
+WhiterunExterior.esp
+83Willows_101BUGS_V4_HighRes_HighSpawn.esp
+AshRocks.esp
+Real Clouds.esp
+Moss Rocks - Legendary.esp
+Prometheus_NSUTR BDS Patch.esp
+Real Roads.esp
 RedMountainErupts.esp
 stable_signs.esp
 SulfurRocks.esp
-Dead Body Collision.esp
-Skysan_ENBHorseTrough.esp
-Skysan_Icicle.esp
-Watercolor_for_ENB_RWT.esp
-WondersofWeather.esp
-AshRocks.esp
+DynDOLOD.esp
+BLESSINGS - Altar Descriptions.esp
+PilgrimsDelight.esp
+RBB - Realistic Water Two.esp
+Skyrim_Ice_Shader_Fix.esp
+EmbersHD.esp
+Cloaks - Dawnguard.esp
+BlockSparkles.esp
+ETaC - Complete BWF Patch.esp
+HighHrothgarWindowGlow.esp
+Beards.esp
+BF.esp
+BFSEffects.esp
 Blacksmithforge water fix DG.esp
 Blacksmithforge water fix HF.esp
+Brows.esp
+Chesko_Step418_SN.esp
+BentPines_for_SFO2.0.esp
+CL BladeofSacrifice.esp
+CL Nettlebane.esp
 dD-Dragonborn-Dawnguard-EBT Patch.esp
+Dead Body Collision.esp
+DeadlySpellImpacts.esp
+DeadlySpellImpacts - Two Fire.esp
 DVA - Dynamic Vampire Appearance.esp
+FluffyKhajiitTails.esp
 Footprints.esp
-Moss Rocks - Legendary.esp
+Gri_BeastFeet.esp
+ImprovedFireyFireSalts.esp
+ImprovedFrostyFrostSalts.esp
 ORM-Arvak.esp
+RAIN.esp
+Realistic HD Beverages.esp
+RSChildren - Complete.esp
+RUSTIC SOULGEMS - Unsorted.esp
+Skysan_ENBHorseTrough.esp
+Skysan_Icicle.esp
 SRTODragonbornParallax.esp
-DynDOLOD.esp
-mintylightningmod.esp
-MintyLightningMod_COT_Patch.esp
+Watercolor_for_ENB_RWT.esp
+WondersofWeather.esp
+RSChildren_PatchUSKP.esp
+EpisodeParallax.esp
 Dual Sheath Redux Patch.esp
