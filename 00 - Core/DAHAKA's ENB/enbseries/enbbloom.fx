@@ -219,7 +219,7 @@ sampler2D SamplerBloom8 = sampler_state
 
 float Luminance( float3 Color )
 {
-	return dot( Color, float3( 0.2125, 0.7154, 0.0721 ) );
+	return dot( Color, float3(0.2125, 0.7154, 0.0721));
 }
 
 /////////////
