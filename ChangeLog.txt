@@ -2,20 +2,20 @@
 BETA 17
 * New tonemapping and gamma method.
 * A lot of bug fixes tweaks of weather parameters.
-* Remove some unnecessary files.
+* Removed some unnecessary files.
 * Compatible with Real Clouds.
-* Fix lag issue.
-* Brighter nights and interior.
+* Fixed lag issue.
+* Brighter nights and interiors.
 * Update esp for new TOD and effect lighting.
 
 
 
 2016.4.5
 BETA 16
-* Fix interior bugs.
+* Fixed interior bugs.
 * Some tweaks of weather parameters.
-* Try some new tonemapping and gamma methods but find that the previous one is the best.
-* Add compatible spider web textures.
+* Tried some new tonemapping and gamma methods but find that the previous one is the best.
+* Added compatible spider web textures.
 
 
 
@@ -25,34 +25,34 @@ BETA 15
 * New tonemapping method of Night and Interior.
 * Balanced Daytime brightness.
 * A lot of tweaks of weather parameters.
-* Fix Bugs of weather and global settings.
-* ESP update for more natural water color.
-* Add compatible wave textures.
+* Fixed Bugs of weather and global settings.
+* ESP updated for more natural water color.
+* Added compatible wave textures.
 
 
 
 2016.3.23
 BETA 14
-* Add support for ENBSeries v0.305 with DawnDusk enabled.
-* Add support for ELFX 3.01+.
+* Added support for ENBSeries v0.305 with DawnDusk enabled.
+* Added support for ELFX 3.01+.
 * Some tweaks of weather parameters.
-* Brightness tweak.
+* Brightness tweaks.
 
 
 
 2016.2.25
 BETA 13
-* Add support for ENBSeries v0.304.
-* Brightness tweak.
-* Darker interior.
+* Added support for ENBSeries v0.304.
+* Brightness tweaks.
+* Darker interiors.
 * A lot of bug fixes and tweaks of weather parameters.
 
 
 
 2016.2.22
 BETA 12
-* Add support for ENBSeries v0.303.
-* Tonemapping and brightness tweak.
+* Added support for ENBSeries v0.303.
+* Tonemapping and brightness tweaks.
 * Some tweaks of weather parameters.
 * A better TimeofDay method, more natural dawn & dusk transition.
 
@@ -60,25 +60,25 @@ BETA 12
 
 2016.2.5
 BETA 11
-* Add support for ENBSeries v0.302.
-* Adjust Day brightness.
-* Adjust Night ambient color and brightness.
+* Added support for ENBSeries v0.302.
+* Adjusted Day brightness.
+* Adjusted Night ambient color and brightness.
 * Some tweaks of weather parameters.
 
 
 
 2016.1.31
 BETA 10
-* Add support for ENBSeries v0.301.
+* Added support for ENBSeries v0.301.
 * Some small tweaks of weather parameters.
 
 
 
 2016.1.31
 BETA 9
-* Fix the Tonemapping problems.
-* Fix the Adaption bug.
-* Fix the ambient fog bug in COT plugin.
+* Fixed the Tonemapping problems.
+* Fixed the Adaption bug.
+* Fixed the ambient fog bug in COT plugin.
 * A lot of tweaks of weather parameters.
 
 
@@ -86,16 +86,16 @@ BETA 9
 2016.1.29
 BETA 8
 * A new Tonemapping method, may cause some problems.
-* Ambient color tweak for Night and Interior.
-* Narrow down the range of the color option.
+* Ambient color tweaks for Nights and Interior.
+* Narrowed down the range of the color option.
 * Some small tweaks of weather parameters.
 
 
 
 2016.1.27
 BETA 7
-* Tonemapping and brightness tweak.
-* Fix an issue with the script.
+* Tonemapping and brightness tweaks.
+* Fixed an issue with the script.
 * Interior brightness tweaks.
 * Some small tweaks of weather parameters.
 
@@ -103,8 +103,8 @@ BETA 7
 
 2016.1.25
 BETA 6
-* Brightness and Gamma balance.
-* Fix bugs.
+* Brightness and Gamma balanced.
+* Fixed bugs.
 * Some small tweaks of weather parameters.
 
 
@@ -120,18 +120,18 @@ BETA 5
 
 2016.1.21
 BETA 4
-* This BETA release is an emergency fix of lens and spell problems.
+* This BETA release an emergency fix of lens and spell problems.
 * Some tweaks of tone and weather to make the day less bright.
-* New UIname for bloom fx, now you can tweak bloom parameters in game.
-* Tweak gamma and desaturated shadow to make it less catoonish.
-* Improve FPS.
+* New UInames for bloom fx, now you can tweak bloom parameters in game.
+* Tweaked gamma and desaturated shadow to make it less catoonish.
+* Improved FPS.
 
 
 
 2016.1.20
 BETA 3
 * Optimized tonemapping oversaturation and balanced level parameters.
-* Fix SubSurfaceScattering bugs.
+* Fixed SubSurfaceScattering bugs.
 * New lighting method to make clear weather more natural.
 * A lot of small tweaks with multiple weather parameters.
 
@@ -141,7 +141,7 @@ BETA 3
 BETA 2
 * Back to the old tonemapping in version 1.0.0.
 * Improvements on the skin.
-* Tweak multiple weather parameters.
+* Tweaked multiple weather parameters.
 
 
 
@@ -150,7 +150,7 @@ BETA 1
 * Removed Water Plugin.
 * New tonemapping and brightness.
 * Multiple weather adjustments.
-* Add a new frost mask.
+* Added a new frost mask.
 * A lot of new features without public tests.
 
 
@@ -178,10 +178,10 @@ ALPHA 4
 
 2015.7.26
 ALPHA 3
-* Decrease Adaption sensitivity at Day.
-* Add black level to interior and Day.
+* Decreased Adaption sensitivity at Day.
+* Added black level to interior and Day.
 * A lot of multiple weather tweaks because of the changes above.
-* Add ambient color to interior instead of pure black.
+* Added ambient color to interior instead of pure black.
 * Now the night should be darker.
 * A new normal map for water plugin.
 
@@ -190,7 +190,7 @@ ALPHA 3
 2015.7.19
 ALPHA 2
 * Tweaked Eye Adaption.
-* Change water color in weather form ID.
+* Changed water color in weather form ID.
 * Small tweaks for multiple weather.
 
  
@@ -236,13 +236,13 @@ First ALPHA release with many new features:
 
 2015.2.11
 0.9.9.12
-* Final tweak and may be the last test release.
+* Final tweaks and may be the last test release.
 
  
 
 2015.2.7
 0.9.9.11
-* Final tweak and tone adjusted.
+* Final tweaks and tone adjusted.
 
  
 
@@ -263,7 +263,7 @@ First ALPHA release with many new features:
 * COT plugin tweaked for better sky color.
 * Autoinstaller script bug fixed.
 * Multiple weather parameters adjusted.
-* NMM preview image remade.
+* NMM preview images remade.
 
 
 
