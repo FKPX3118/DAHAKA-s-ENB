@@ -14,7 +14,7 @@ BETA 17
 BETA 16
 * Fixed interior bugs.
 * Some tweaks of weather parameters.
-* Tried some new tonemapping and gamma methods but find that the previous one is the best.
+* Tried some new tonemapping and gamma methods but found that the previous one is the best.
 * Added compatible spider web textures.
 
 
@@ -120,7 +120,7 @@ BETA 5
 
 2016.1.21
 BETA 4
-* This BETA release an emergency fix of lens and spell problems.
+* Emergency fix for lens and spells interaction issues.
 * Some tweaks of tone and weather to make the day less bright.
 * New UInames for bloom fx, now you can tweak bloom parameters in game.
 * Tweaked gamma and desaturated shadow to make it less catoonish.
