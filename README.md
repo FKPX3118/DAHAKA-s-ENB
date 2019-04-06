@@ -58,6 +58,14 @@
 * RelightingSkyrim.esp
 * TrueStorms.esp
 * TrueStorms-ClimatesOfTamriel.esp
+* Vivid Weathers.esp
+* Vivid Snow Physical.esp
+* Vivid Snow.esp
+* Vivid Weathers - Extended Rain.esp
+* Vivid Weathers - Extended Snow.esp
+* Vividian - Extended Groundfogs.esp
+* Vividian - Weather Patch CoT.esp
+* Vividian - Extended Groundfogs - CoT.esp
 
 # Recommended MODS
 
@@ -66,6 +74,8 @@
 * [Vivid Clouds and Fogs - Vanilla and Climates of Tamriel](http://www.nexusmods.com/skyrim/mods/59809/?) by Mangaclub
 
 * [Dynamic Distant Objects LOD - DynDOLOD](http://www.nexusmods.com/skyrim/mods/59721/?) by Sheson
+
+* [Rudy HQ - More Lights](https://www.nexusmods.com/skyrim/users/93362?tab=user+files) by Rudy
 
 
 # FAQ
