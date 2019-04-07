@@ -36,22 +36,11 @@
 * EnhancedLightsandFX.esp
 
 ### Incompatible ESPs
-* ELFX - Exteriors.esp
-* ClimatesOfTamriel-Interiors-Warm.esp
-* ClimatesOfTamriel-Interiors-Cold.esp
-* ClimatesOfTamriel-Dungeons-Hazardous.esp
-* ClimatesOfTamriel-Dungeons-Hardcore.esp
-* Realistic Lighting Overhaul - Dungeons.esp
-* Realistic Lighting Overhaul - Major City Exteriors.esp
-* Realistic Lighting Overhaul - Major City Interiors.esp
-* Realistic Lighting Overhaul - Minor Cities and Town Interiors.esp
 * Realistic Lighting Overhaul - Weathers.esp
 * CoT-WeatherPatch.esp
 * Supreme Storms - Cot Version.esp
 * Pureweather.esp
 * Natural Lighting and Atmospherics.esp
-* Shadows - Dawnguard.esp
-* Shadows - Skyrim.esp
 * Shadows - Weather Tweaks.esp
 * Realistic Lighting - Full.esp
 * RealShelter.esp
